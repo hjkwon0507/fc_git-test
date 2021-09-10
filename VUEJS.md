@@ -24,7 +24,7 @@
     data(){
       return {
         price1 : 60,
-        products : ['역삼동원룸', '천호동원룸', '마포구원룸']
+        products : ['성수동원룸', '천호동원룸', '마포구원룸']
       }
     },
     components: {

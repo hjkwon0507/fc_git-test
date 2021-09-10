@@ -13,7 +13,7 @@
   </div>
   <div>
     <h4>{{products[2]}} 원룸</h4>
-    <p>70 만원</p>
+    <h2>80 만원</h2>
   </div>
 </template>
 ```

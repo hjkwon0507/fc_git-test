@@ -1,0 +1,140 @@
+<!--<template>
+    <div>
+    <div class="menu">
+    <div class="black" v-if="popopen==true">
+      <div class="white">
+      <h4>상세 페이지</h4>
+      <p>해당 원룸은 ~어쩌고 저쩌고~</p>
+      <div class="close" @click="closes">x</div>
+      </div>
+    </div>
+    
+    <div class="black" v-if="imgpop==true" @click="imgcloses">
+      <img :src="alldata[0].image">
+      <div class="imgclose" @click="imgcloses">x</div>
+    </div>
+    
+    <a v-for="(name,nodes) in menus" :key="nodes">{{name}}</a>
+    <a>products</a>
+    <a>about</a>
+    </div>
+    <div class="box">
+      <h2>원룸샵</h2>
+    
+      <div v-for="(na,no) in clicks" :key="no">
+      <img :src="alldata[no].image" class="roomimg" @click="imgpop=true">
+      <h4 style="color:darkslateblue" @click="popopen=true">{{alldata[no].content}}</h4>
+      <p>{{alldata[no].price.toLocaleString()}} 만원</p>
+      <button @click="clicks[no]++" class="btn">허위매물 신고</button> <span style="font-size:12px;">신고 건수 : {{clicks[no]}}</span>
+      </div>
+    </div>
+    </div>
+    <!--
+      <div>
+      <h4>{{products[1]}}</h4>
+      <p>70 만원</p>
+      <button @click="clicks[1]++">허위매물 신고</button> <span>신고 건수 : {{clicks[1]}}</span>
+      </div>
+    
+      <div>
+      <h4>{{products[2]}}</h4>
+      <p>70 만원</p>
+      <button @click="clicks[2]++">허위매물 신고</button> <span>신고 건수 : {{clicks[2]}}</span>
+      </div>
+    </template>
+        -->
+    
+    <script>
+    import data from './data.js';
+    console.log(data)
+    export default {
+      name: 'App',
+      data(){
+        return{
+          alldata:data,
+          popopen:false,
+          imgpop:false,
+          menus:["home","products","about","shop","contact"],
+          price1:60,
+          bluecolor : "color:blue",
+          products : ["역삼동 원룸","성수역 원룸","마포구 투룸"],
+          clicks:[0,0,0]
+        }
+      },
+      methods:{
+        numups(){
+          this.clicks++;
+        },
+        closes(){
+          this.popopen=false;
+        },
+        imgcloses(){
+          this.imgpop=false;
+        },
+        imgscale(){
+          this.imgpop=false;
+        }
+      },
+      components: {
+    
+      }
+    }
+    </script>
+    <style>
+    
+    body{padding: 0; margin: 0; box-sizing: border-box;}
+    .menu{
+    background-color: darkslateblue;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    }
+    .menu a{
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    }
+    .black{
+    width:100%; height: 100%;
+    background-color:rgba(0,0,0,0.5);
+    position: fixed; padding: 20px;
+    }
+    .white{
+    width: 50%; background-color: white;
+    border-radius: 8px; padding: 20px;
+    margin: 0 auto; position: relative;
+    }
+    .close{
+      width: 30px; height: 30px; background-color: #ddd;
+      right:0; position: absolute;
+      top: 0; border-radius: 0 8px 0 0; cursor: pointer;
+      font-weight: bold;
+    }
+    .box{
+      width: 800px; height: auto;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .roomimg{
+      width:500px;
+      margin-top: 50px;
+      cursor: pointer;
+    }
+    .btn{
+      cursor: pointer; border: none;
+      width: 130px; height: 50px;
+      margin-right: 10px;
+      border-radius: 50px;
+    }
+    .btn:hover{
+      box-shadow: 5px 5px 10px rgb(230, 230, 230);
+    }
+    .black>img{
+      width: 1000px; position: relative;
+    }
+    .imgcloses{
+      position: absolute; right:0; z-index: 10;
+      width: 30px; height: 30px; background-color: #ddd;
+      top: 0;
+    }
+    </style>

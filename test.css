@@ -1,0 +1,32 @@
+span, label {
+  display: block;
+}
+
+.box {
+  width: 1200px;
+  height: 600px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.imgbox {
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.f {
+  width: 200px;
+  height: 40px;
+  background-color: #2E038C;
+  color: white;
+  font-weight: bold;
+  border-radius: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.a {
+  margin-top: 10px;
+}/*# sourceMappingURL=test.css.map */

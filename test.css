@@ -75,6 +75,14 @@ ul, dl {
   font-weight: bold;
 }
 
+.maintext {
+  width: 1200px;
+  height: auto;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .upload {
   margin-top: 10px;
 }/*# sourceMappingURL=test.css.map */

@@ -1,3 +1,6 @@
+$(function(){
+    alert("test")
+})
         // 적용할 클래스명
         var className = "box";
         // 지금의 스크롤 위치를 담을 변수

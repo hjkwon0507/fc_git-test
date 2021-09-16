@@ -43,7 +43,6 @@ ul, dl {
 .home {
   width: 100%;
   height: 940px;
-  border: 1px solid red;
 }
 
 .topbox {
@@ -102,6 +101,10 @@ ul, dl {
   text-align: center;
   margin: 0 auto;
   color: #555555;
+}
+
+#sec2 {
+  height: 900px;
 }
 
 .guide_title {

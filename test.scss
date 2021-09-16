@@ -23,7 +23,6 @@ ul,dl{list-style:none; margin: 0; padding: 0;}
 .home{
     width:100%;
     height: 940px;
-    border: 1px solid red;
 }
 .topbox{
     width: 100%;
@@ -84,6 +83,9 @@ ul,dl{list-style:none; margin: 0; padding: 0;}
     }
 }
 //page2
+#sec2{
+    height: 900px;
+}
 .guide_title{
     font-size: 30px;
     width: 300px;

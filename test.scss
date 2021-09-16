@@ -10,16 +10,20 @@ ul,dl{list-style:none; margin: 0; padding: 0;}
     margin: 0 auto;
 }
 %btn {
-    width: 200px; height: 40px;
+    width: 200px; height: 50px;
     background-color:#2E038C;
     color: white;
     font-weight: bold;
     border-radius:40px;
     text-align: center;
-    line-height: 40px;
+    line-height: 50px;
     font-size: 16px;
     cursor: pointer;
+    &:hover{
+        box-shadow: 1px 1px 15px #aaa;
+    }
 }
+//menu
 header{
     width: 100%;
     height: 80px;
@@ -60,6 +64,7 @@ header{
         }
     }
     }
+//home
 .home{
     width:100%;
     height: 945px;
@@ -81,7 +86,7 @@ header{
         color: rgb(85, 85, 85);
     }
 }
-//page2
+//guide
 #sec2{
     height: 900px;
 }

@@ -20,5 +20,15 @@ $(function(){
     })
     $("body").on("mousewheel", function (event) { 
         console.log(event.originalEvent.wheelDelta);
+        if(event.originalEvent.wheelDelta<0){
+            $("html,body").stop().animate({
+                "scrollTop":$s2_height+"px"
+            },700);
+        }
+        if(event.originalEvent.wheelDelta>0){
+            $("html,body").stop().animate({
+                "scrollTop":"0px"
+            },700);
+        }
     });
 });

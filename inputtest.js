@@ -1,5 +1,5 @@
 $(function(){
-    alert("test")
+    console.log("test")
 })
         // 적용할 클래스명
         var className = "box";

@@ -45,7 +45,6 @@ ul, dl {
 .home {
   width: 1200px;
   height: 900px;
-  border: 1px solid black;
 }
 
 .topbox {
@@ -73,6 +72,19 @@ ul, dl {
 .topbox > .topmenu > li:first-child {
   color: #2E038C;
   font-weight: bold;
+}
+
+.maintext {
+  width: 1200px;
+  height: auto;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.subtext {
+  width: 1200px;
+  height: auto;
 }
 
 .upload {

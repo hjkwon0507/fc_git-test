@@ -24,7 +24,6 @@ ul,dl{list-style:none; margin: 0; padding: 0;}
 .home{
     width: 1200px;
     height: 900px;
-    border: 1px solid black;
 }
 .topbox{
     width: 1200px;
@@ -52,7 +51,18 @@ ul,dl{list-style:none; margin: 0; padding: 0;}
         }
     }
 }
-
+.maintext{
+    width: 1200px;
+    height: auto;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.subtext{
+    width: 1200px;
+    height: auto;
+}
 //buttons
 .btn{
     @extend %btn;

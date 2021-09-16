@@ -13,9 +13,12 @@ $(function(){
         $("html,body").stop().animate({
             "scrollTop":($s2_height*$menu_index)+"px"
         },700);
-        //$(this).css("color","black");
-        //$("#topmenu>li").eq($menu_index).css("color","#2F214A");
-        //console.log($menu_index)
-
+        $("#topmenu>li").css("color","black");
+        $("#topmenu>li").css("font-weight","normal");
+        $("#topmenu>li").eq($menu_index).css("color","#2E038C");
+        $("#topmenu>li").eq($menu_index).css("font-weight","bold");
     })
+    $("body").on("mousewheel", function (event) { 
+        console.log(event.originalEvent.wheelDelta);
+    });
 });

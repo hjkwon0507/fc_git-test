@@ -7,14 +7,18 @@ $(function(){
 		$("section").height(ht);
 	});	
 
-    // home 시작하기로 다음페이지 이동
+    // home 시작하기, guide 만들기 로 다음페이지 이동
     var $s2_height=$("#sec2").height();
     $("#start").click(function(){
         $("html,body").stop().animate({
             "scrollTop":$s2_height+"px"
         },700);
     });
-
+    $("#make").click(function(){
+        $("html,body").stop().animate({
+            "scrollTop":($s2_height*2)+"px"
+        },700);
+    });
     // // 상단메뉴바 조정
     // $("#top_menu>li").click(function(){
     //     var $menu_index=$(this).index()
@@ -51,21 +55,6 @@ $(function(){
     
 	});
 
-    // 마우스 휠 조작
-    $("body").on("mousewheel", function (event) { 
-        console.log(event.originalEvent.wheelDelta);
-        if(event.originalEvent.wheelDelta>0){
-            $("html,body").stop().animate({
-                "scrollTop":"0px"
-            },700);
-        }
-        if(event.originalEvent.wheelDelta<0){
-            $("html,body").stop().animate({
-                "scrollTop":$s2_height+"px"
-            },700);
-        }
-    });
-
     // 분석하기
     $("#analyze").click(function(){
         var $image_ok=$("#preview_image").attr("src");
@@ -74,4 +63,30 @@ $(function(){
             alert("사진을 먼저 업로드 해주세요!")
         }
     });
+});
+// 마우스 휠 조작
+window.addEventListener("wheel", function(e){
+	e.preventDefault();
+},{passive : false});
+$(function(){
+    var $html = $("html");
+    var page = 1;
+    var $lastPage = $(".sec").length;//마지막 페이지번호
+
+    $(window).on('wheel',function(e){
+        if($html.is(":animated")) return;
+        //scroll down
+        if(e.originalEvent.deltaY > 0){
+            if(page == $lastPage) return;
+            page++;
+        }
+        //scroll up
+        else if(e.originalEvent.deltaY < 0){
+            if(page == 1) return;
+            page--;
+        }
+        var postop = (page-1) * $(window).height();
+        $html.animate({scrollTop : postop});
+    });
+
 });

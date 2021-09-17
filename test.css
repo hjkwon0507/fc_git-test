@@ -157,7 +157,8 @@ header {
   background-color: #F2F2F2;
   border-radius: 70px;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top:100px;
+  margin-bottom: 100px;
   padding-top: 10px;
 }
 .guide_con  ol {
@@ -207,9 +208,9 @@ header {
 .btn_box {
   width: 200px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top:150px;
 }
 .analyze {
-  margin-top: 30px;
+  margin-top:50px;
 }
 /*# sourceMappingURL=test.css.map */

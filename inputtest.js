@@ -20,15 +20,22 @@ $(function(){
     })
     $("body").on("mousewheel", function (event) { 
         console.log(event.originalEvent.wheelDelta);
+        if(event.originalEvent.wheelDelta>0){
+            $("html,body").stop().animate({
+                "scrollTop":"0px"
+            },700);
+        }
         if(event.originalEvent.wheelDelta<0){
             $("html,body").stop().animate({
                 "scrollTop":$s2_height+"px"
             },700);
         }
-        if(event.originalEvent.wheelDelta>0){
-            $("html,body").stop().animate({
-                "scrollTop":"0px"
-            },700);
+    });
+    $("#analyze").click(function(){
+        var $image_ok=$("#preview-image").attr("src");
+        console.log($image_ok)
+        if($image_ok==="upload_img.PNG"){
+            alert("사진을 먼저 업로드 해주세요!")
         }
     });
 });

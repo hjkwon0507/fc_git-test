@@ -14,11 +14,17 @@ ul, dl, ol {
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+  color: #333;
+}
 .inner {
   width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .btn {
+  display: block;
   width: 200px;
   height: 50px;
   background-color: #2E038C;
@@ -35,6 +41,7 @@ ul, dl, ol {
   box-shadow: 1px 1px 15px #aaa;
 }
 
+
 /*header*/
 header {
   width: 100%;
@@ -44,15 +51,27 @@ header {
   top: 0;
   z-index: 5;
 }
+
 .header_inner {
   width: 1500px;
   margin: 0 auto;
+  overflow: hidden;
 }
-.header_inner  img {
+.header_inner .logo {
   margin-top: 20px;
-  cursor: pointer;
+  width: 223px;
+  height: 45px;
+  float: left;
 }
-.header_inner  .topmenu {
+.header_inner .logo > a {
+  display: block;
+  width: 223px;
+  height: 45px;
+  background-image: url(./logo.png);
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.header_inner #top_menu {
   width: auto;
   height: 80px;
   display: flex;
@@ -60,25 +79,25 @@ header {
   right: 0;
   top: 0;
 }
-.header_inner  .topmenu  li {
+.header_inner  #top_menu  li {
   width: 100px;
   text-align: center;
   line-height: 80px;
   justify-content: space-around;
   cursor: pointer;
 }
-.header_inner  .topmenu  li:first-child {
+.header_inner  #top_menu  li a:hover {
   color: #2E038C;
   font-weight: bold;
 }
-.header_inner  .topmenu  li:hover {
+.header_inner  #top_menu  li.on a {
   color: #2E038C;
   font-weight: bold;
 }
 
 /*footer*/
 .footer {
-  width: 1200px;
+  width: 100%;
   height: 300px;
   background-color: #2F214A;
   color: white;
@@ -97,10 +116,8 @@ header {
 }
 
 /*main*/
-/*page1_home*/
+/*home*/
 .home {
-  width: 100%;
-  height: 945px;
   position: relative;
 }
 .home_text {
@@ -116,10 +133,7 @@ header {
   line-height: 300px;
 }
 
-/*page2_guide*/
-#sec2 {
-  height: 900px;
-}
+/*guide*/
 .main_title {
   font-size: 30px;
   width: 300px;
@@ -128,8 +142,7 @@ header {
   text-align: center;
   box-shadow: 0 5px 5px -4px #aaa;
   font-weight: bold;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 60px auto 0;
 }
 .sub_title {
   width: 1200px;
@@ -164,22 +177,21 @@ header {
   width: 100px;
   height: 100px;
 }
-.guide_con ol li div {
+.guide_con ol li p {
   width: inherit;
   text-align: center;
   margin-top: 30px;
 }
 
-/*page3_create*/
+/*create*/
 .create_con {
   width: 1200px;
   height: 800px;
   text-align: center;
   padding-top: 100px;
 }
-.create_con  img {
-  width: 200px;
-  height: 200px;
+.create_con img {
+  width: 400px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 50px;

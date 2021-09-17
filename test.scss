@@ -1,10 +1,10 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-html,body{ margin:0; padding:0; box-sizing: border-box; font-family: 'Noto Sans', sans-serif;
+html,body{ margin:0; padding:0; box-sizing: border-box; 
+    font-family: 'Noto Sans', sans-serif;
 }
 span,label{display: block;}
-ul,dl{list-style:none; margin: 0; padding: 0;}
-.box{ width:100%; height:100%; position:relative;}
+ul,dl,ol{list-style:none; margin: 0; padding: 0;}
 .inner{
     width: 1200px;
     margin: 0 auto;
@@ -33,9 +33,9 @@ header{
     top:0;
     z-index: 5;
 }
-.topbox{
-    &>.inner{
+.header_inner{
         width: 1500px;
+        margin: 0 auto;
         &>img{
             margin-top: 20px;
             cursor: pointer;
@@ -64,35 +64,30 @@ header{
             }
         }
     }
-    }
+
 //home
 .home{
     width:100%;
     height: 945px;
+    position:relative;
 }    
-.main_textbox{
+.home_text{
     width: 100%;
     height: 500px;
     background-color: #F2F2F2;
     margin-bottom: 200px;
-    &>.maintext{
+    &>.main_text{
         font-size: 35px;
         font-weight: bold;
         text-align: center;
         line-height:300px;
-    }
-    &>.subtext{
-        width: 1200px;
-        text-align: center;
-        margin: 0 auto;
-        color: rgb(85, 85, 85);
     }
 }
 //guide
 #sec2{
     height: 900px;
 }
-.guide_title{
+.main_title{
     font-size: 30px;
     width: 300px;
     height: auto;
@@ -103,14 +98,14 @@ header{
     margin: 0 auto;
     margin-top: 50px;
 }
-.giude_subtext{
+.sub_title{
     width: 1200px;
     height: 200px;
     margin: 0 auto;
     text-align: center;
     line-height: 400px;
 }
-.guide_box{
+.guide_con{
     width: 1000px;
     height: 270px;
     background-color: #F2F2F2;
@@ -118,7 +113,7 @@ header{
     margin: 0 auto;
     margin-top:200px;
     padding-top: 10px;
-    &>ul{
+    &>ol{
         width: 800px;
         height: 250px;
         margin: 0 auto;
@@ -141,13 +136,25 @@ header{
         }
     }
 }
+.create_con{
+    width: 1200px;
+    height: 800px;
+    text-align: center;
+    padding-top:100px;
+    &>img{
+        width:200px;
+        height: 200px;
+        object-fit: contain;
+        margin-bottom: 50px;
+    }
+}
 .footer{
     width: 1200px;
     height: 300px;
     background-color:#2F214A;
     color: white;
     font-size: 14px;
-    &>ul{
+    &>ol{
         width: 800px;
         height: auto;
         margin: 0 auto;
@@ -158,20 +165,15 @@ header{
         }
     }
 }
-.image-container{
+.sub_text{
     width: 1200px;
-    height: 800px;
     text-align: center;
-    padding-top: 200px;
-    &>img{
-        width:250px;
-        height: 250px;
-        object-fit: contain;
-        margin-bottom: 50px;
-    }
+    margin: 0 auto;
+    color: rgb(85, 85, 85);
+    font-weight: bold;
 }
 //buttons
-.btnbox{
+.btn_box{
     width: 200px;
     margin: 0 auto;
     margin-top: 100px;

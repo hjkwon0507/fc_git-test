@@ -1,28 +1,55 @@
 $(function(){
-    //로고이동
-    $("#logo").click(function(){
-        location.href="http://127.0.0.1:5500/inputtest.html";
-    });
+    // fullpage 화면에 꽉차게
+	var ht = $(window).height();	
+	$("section").height(ht);
+	$(window).on("resize",function(){
+		var ht = $(window).height();	
+		$("section").height(ht);
+	});	
 
-    //home 시작하기로 다음페이지 이동
+    // home 시작하기로 다음페이지 이동
     var $s2_height=$("#sec2").height();
     $("#start").click(function(){
         $("html,body").stop().animate({
             "scrollTop":$s2_height+"px"
         },700);
-    })
+    });
 
-    // 상단메뉴바 조정
-    $("#topmenu>li").click(function(){
-        var $menu_index=$(this).index()
-        $("html,body").stop().animate({
-            "scrollTop":($s2_height*$menu_index)+"px"
-        },700);
-        $("#topmenu>li").css("color","black");
-        $("#topmenu>li").css("font-weight","normal");
-        $("#topmenu>li").eq($menu_index).css("color","#2E038C");
-        $("#topmenu>li").eq($menu_index).css("font-weight","bold");
-    })
+    // // 상단메뉴바 조정
+    // $("#top_menu>li").click(function(){
+    //     var $menu_index=$(this).index()
+    //     $("html,body").stop().animate({
+    //         "scrollTop":($s2_height*$menu_index)+"px"
+    //     },700);
+    //     $("#top_menu>li>a").css("color","#333");
+    //     $("#top_menu>li>a").css("font-weight","normal");
+    //     $("#top_menu>li>a").eq($menu_index).css("color","#2E038C");
+    //     $("#top_menu>li>a").eq($menu_index).css("font-weight","bold");
+    // })
+
+    // 상단메뉴 버튼 클릭시 
+	$("#top_menu li").on("click",function(e){
+		e.preventDefault();
+		var ht = $(window).height();
+		var i = $(this).index();  
+		var nowTop = i*ht;			
+	
+		$("html,body").stop().animate({"scrollTop":nowTop},1000);
+	});
+
+    // 상단메뉴 스크롤 스파이
+    $(window).on("scroll",function(){	
+		var ht = $(window).height(); 
+		var scroll = $(window).scrollTop();
+
+		for(var i=0; i<7;i++){
+			if(scroll>=ht*i && scroll< ht*(i+1)){
+				$("#top_menu li").removeClass();
+				$("#top_menu li").eq(i).addClass("on");
+			};
+		}
+    
+	});
 
     // 마우스 휠 조작
     $("body").on("mousewheel", function (event) { 

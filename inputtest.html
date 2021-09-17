@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input file test</title>
 
     <meta name="title" content="AI이미지 분석">
     <meta name="description" content="AI이미지 분석,AI,이미지 분석,딥러닝,파인드 커넥트,FIND CONNECT">
@@ -16,12 +17,11 @@
     <meta property="og:title" content="AI,이미지 분석,딥러닝">
     <meta property="og:site_name" content="AI이미지 분석">
     <meta property="og:type" content="website">
-    <link rel="icon" href="./PAVICON.PNG" sizes="128x128">
-    <link ref="apple-touch-icon-percomposed" href="./PAVICON.PNG">
+    <link rel="icon" href="./PAVICON.png" sizes="128x128">
+    <link ref="apple-touch-icon-percomposed" href="./PAVICON.png">
     <meta property="al:web:url" content="">
 
     <link rel="stylesheet" type="text/css" href="./test.css">
-    <title>input file test</title>
     <script defer src="./jquery.js"></script>
     <script defer src="./inputtest.js"></script>
     <script defer src="./create.js"></script>
@@ -31,12 +31,12 @@
 <!--상단 로고/메뉴-->
 <header>
         <div class="header_inner">
-            <img src="./logo.PNG" title="find connect" id="logo">
-            <ul class="topmenu" id="topmenu">
-                <li title="Home">Home</li>
-                <li title="Guide">Guide</li>
-                <li title="Create">Create</li>
-                <li title="Join">Join</li>
+            <h1 class="logo"><a href="#">파인드커넥트 로고</a></h1>
+            <ul id="top_menu">
+                <li title="Home" class="on"><a href="#home">Home</a></li>
+                <li title="Guide"><a href="#guide">Guide</a></li>
+                <li title="Create"><a href="#create">Create</a></li>
+                <li title="Join"><a href="#join">Join</a></li>
             </ul>
         </div>
 </header>
@@ -44,41 +44,41 @@
 <!--페이지 1-home-->
 <section class="home" id="sec1">
         <div class="home_text">
-        <p class="main_text">ABOUT FINDSTOCK</p>
-        <div class="sub_text">이미지에 어울리는 자막폰트와 배경음악을 AI가 추천해드립니다.</div>
+            <p class="main_text">ABOUT FINDSTOCK</p>
+            <p class="sub_text">이미지에 어울리는 자막폰트와 배경음악을 AI가 추천해드립니다.</p>
         </div>
-    <div class="btn" id="start">시작하기</div>
+    <a class="btn" id="start">시작하기</a>
 </section>
 
 <!--페이지 2-guide-->
 <section class="giude" id="sec2">
     <div class="inner">
-        <div class="main_title">Guide</div>
-        <div class="sub_title">
+        <p class="main_title">Guide</p>
+        <p class="sub_title">
             AI 머신러닝과 딥러닝을 활용 하여 이미지를 분석해 어울리는 폰트 및 음악을 선정 및 조합하는 기술
-        </div>
+        </p>
         <div class="guide_con">
             <ol>
                 <li>
-                    <img src="./outline_person_black_48dp.png">
-                    <div>
+                    <img src="./outline_person_black_48dp.png" alt="사용자 아이콘">
+                    <p>
                         사용자가 플랫폼에 <br>
                         만들고자 하는 이미지 업로드
-                    </div>
+                    </p>
                 </li>
                 <li>
-                    <img src="./outline_sync_black_48dp.png">
-                    <div>
+                    <img src="./outline_sync_black_48dp.png" alt="분석 아이콘">
+                    <p>
                         AI가 필요한 정보를 분석해 <br>
                         폰트와 음악 소스 찾기
-                    </div>
+                    </p>
                 </li>
                 <li>
-                    <img src="./outline_image_black_48dp.png">
-                    <div>
+                    <img src="./outline_image_black_48dp.png" alt="이미지 아이콘">
+                    <p>
                         이미지 정보에 맞는 폰트 및 <br>
                         음악 선정 완료
-                    </div>
+                    </p>
                 </li>
             </ol>
         </div>
@@ -86,16 +86,16 @@
 </section>
 
 <!--페이지 3-create-->
-<section class="create">
+<section class="create" id="sec3">
     <div class="inner">
-        <div class="main_title">Create</div>
+        <p class="main_title">Create</p>
         <div class="create_con">
-            <img style="width: 500px;" id="preview_image" src="upload_img.PNG" >
-            <div class="sub_text">AI 분석을 위한 이미지 업로드 하기</div>
+            <img id="preview_image" src="upload_img.png">
+            <p class="sub_text">AI 분석을 위한 이미지 업로드 하기</p>
                 <div class="btn_box">
-                <label for="input-image" class="btn analyze" id="upload">사진 업로드</label>
-                <input style="display: none;" type="file" id="input-image">
-                <div class="btn analyze" id="analyze">분석하기</div>
+                    <label for="input_image" class="btn analyze" id="upload">사진 업로드</label>
+                    <input style="display: none;" type="file" id="input_image">
+                    <a class="btn analyze" id="analyze">분석하기</a>
                 </div>
         </div>
     </div>
